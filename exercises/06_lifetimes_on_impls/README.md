@@ -63,8 +63,8 @@ It's useful to note that we've done this in two parts -- `impl<'lifetime>` defin
 It doesn't make any promises about what that lifetime is, it just says it exists.
 `WordIterator<'lifetime>` then uses the lifetime we created, and says "the references in `WordIterator` must live for `lifetime`".
 
-Now, anywhere in the impl block, we can choose to use that lifetime. Any reference we annotate with `'lifetime'`
-must have the same lifetime as any other reference annotated with `'lifetime'`.
+Now, anywhere in the impl block, we can choose to use that lifetime. Any reference we annotate with `'lifetime`
+must have the same lifetime as any other reference annotated with `'lifetime`.
 
 ``` rust,ignore
 # /// This struct keeps track of where we're up to in the string.
